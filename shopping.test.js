@@ -66,6 +66,12 @@ test("Item correct after being created", async () => {
 test("Check the color of the h1", async () => {
     const element = await browser.getElementByCss('#item-1');
     const colour = await element.getCssValue('color');
-    expect(colour).toBe('rgba(51, 51, 51, 1)')
-})
+    expect(colour).toBe('rgba(51, 51, 51, 1)');
+});
 
+// test('Hover effect on bullet points', async () => {
+//     const element = await browser.getElementByCss('#action-3');
+//     const actions = browser.headless.actions({async: true});
+//     const mouseHover = actions.move({origin: element}).perform();
+//     expect(mouseHover).toBe('button:not(:disabled):active')
+// });
